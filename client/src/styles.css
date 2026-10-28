@@ -1,0 +1,42 @@
+:root {
+  --fondo: #f3f7f6; --papel: #ffffff; --tinta: #16292b; --suave: #5b6f70;
+  --pino: #0e5a5a; --pino-osc: #0a4444; --menta: #d9ede8; --ambar: #f2b84b;
+  --coral: #c8452f; --borde: #d3e0de;
+  --fuente: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--fondo); color: var(--tinta); font-family: var(--fuente); line-height: 1.5; }
+.page { max-width: 1080px; margin: 0 auto; padding: 32px 20px 64px; }
+header { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  border-bottom: 4px solid var(--ambar); padding-bottom: 12px; margin-bottom: 28px; }
+h1 { margin: 0; font-size: 2rem; color: var(--pino); letter-spacing: -0.02em; }
+header p { margin: 0; color: var(--suave); font-size: 1.05rem; }
+main { display: grid; grid-template-columns: 1fr 340px; gap: 32px; align-items: start; }
+@media (max-width: 800px) { main { grid-template-columns: 1fr; } }
+
+.dia h2 { font-size: 1.05rem; text-transform: capitalize; margin: 24px 0 8px; color: var(--pino); }
+.dia:first-child h2 { margin-top: 0; }
+.cita { display: grid; grid-template-columns: 64px 1fr auto; gap: 14px; align-items: start;
+  background: var(--papel); border: 1px solid var(--borde); border-left: 5px solid var(--pino);
+  border-radius: 6px; padding: 12px 14px; margin-bottom: 8px; }
+.cita time { font-weight: 700; font-size: 1.1rem; color: var(--pino); font-variant-numeric: tabular-nums; }
+.info { display: flex; flex-direction: column; gap: 2px; }
+.especie { background: var(--menta); color: var(--pino-osc); font-size: .75rem; font-weight: 600;
+  padding: 1px 8px; border-radius: 99px; margin-left: 6px; }
+.meta { color: var(--suave); font-size: .875rem; }
+.vacio { background: var(--papel); border: 1px dashed var(--borde); padding: 24px; border-radius: 6px; color: var(--suave); }
+
+form { background: var(--papel); border: 1px solid var(--borde); border-radius: 6px; padding: 20px;
+  display: flex; flex-direction: column; gap: 12px; position: sticky; top: 16px; }
+form h2 { margin: 0 0 4px; font-size: 1.25rem; color: var(--pino); }
+label { display: flex; flex-direction: column; gap: 4px; font-size: .875rem; font-weight: 600; }
+input, select { font: inherit; font-weight: 400; padding: 8px 10px; border: 1px solid var(--borde);
+  border-radius: 4px; background: #fff; color: var(--tinta); }
+input:focus-visible, select:focus-visible, button:focus-visible { outline: 3px solid var(--ambar); outline-offset: 1px; }
+.primario { background: var(--pino); color: #fff; border: 0; border-radius: 4px; padding: 11px;
+  font: inherit; font-weight: 700; cursor: pointer; }
+.primario:hover { background: var(--pino-osc); }
+.link { background: none; border: 0; color: var(--coral); font: inherit; font-size: .875rem; cursor: pointer; text-decoration: underline; }
+.msg { margin: 0; padding: 8px 10px; border-radius: 4px; font-size: .875rem; }
+.error { background: #fbe5e0; color: #8a2a19; }
+.ok { background: var(--menta); color: var(--pino-osc); }

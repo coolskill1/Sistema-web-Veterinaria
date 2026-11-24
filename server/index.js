@@ -17,7 +17,7 @@ const h = (fn) => (req, res) =>
     res.status(500).json({ error: "Error del servidor" });
   });
 
-// ---------------------------------------------------------------------
+// -------------------------------------------------------------------
 // Validaciones (mismas reglas que el frontend y que la base de datos)
 // ---------------------------------------------------------------------
 const opcional = (v) => (typeof v === "string" && v.trim() ? v.trim() : null);
